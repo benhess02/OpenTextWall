@@ -108,8 +108,8 @@ function drawBackground(){
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, cvs.width, cvs.height);
 
-    ctx.strokeStyle = "grey";
-// Test
+    ctx.strokeStyle = "lightgrey";
+
     var gridSize = 150;
 
     var xLines = Math.ceil(cvs.width / gridSize);
@@ -154,6 +154,19 @@ function drawText(){
             ctx.fillText(lines[l], _x, _y + (l * textSize));
         }
     }
+}
+
+function drawCrosshair(){
+    var size = 10;
+    var x = cvs.width / 2;
+    var y = cvs.height / 2;
+    ctx.strokeStyle = "grey";
+    ctx.beginPath();
+    ctx.moveTo(x - size, y);
+    ctx.lineTo(x + size, y);
+    ctx.moveTo(x, y - size);
+    ctx.lineTo(x, y + size);
+    ctx.stroke();
 }
 
 function drawStatusText(){
@@ -206,6 +219,7 @@ function setGameEnabled(enabled){
 window.setInterval(function(){
     drawBackground();
     drawText();
+    drawCrosshair();
     drawStatusText();
     if(mouseDown){
         cameraX = Math.floor(dragCameraX + (dragMouseX - mouseX));
