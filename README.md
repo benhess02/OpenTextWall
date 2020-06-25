@@ -4,8 +4,8 @@ Open Text Boxes is a site which allows anyone to post short messages anywhere on
 ## Running
 1. Clone the repo using `git clone https://github.com/YumProjects/OpenTextBoxes.git`
 2. Run locally using PHP dev server (on Windows): 
-  ```
-  cd OpenTextBoxes
-  php -S 0.0.0.0:8080
-  ``` 
-  (any HTTP server with PHP can be used)
+    ```
+    cd OpenTextBoxes
+    php -S 0.0.0.0:8080
+    ``` 
+    (any HTTP server with PHP can be used)
