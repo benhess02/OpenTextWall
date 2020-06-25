@@ -109,7 +109,7 @@ function drawBackground(){
     ctx.fillRect(0, 0, cvs.width, cvs.height);
 
     ctx.strokeStyle = "grey";
-
+// Test
     var gridSize = 150;
 
     var xLines = Math.ceil(cvs.width / gridSize);
