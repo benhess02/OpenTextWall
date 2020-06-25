@@ -17,17 +17,28 @@ html, body{
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
-    margin-top: 20px;
 }
 
 .subtitleText {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-style: italic;
     margin-top: 8px;
 }
 
+.instructionText {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+}
+
+.instructionText li {
+    margin-bottom: 8px;
+}
 
 /* Boxes */
 .box {
@@ -42,6 +53,7 @@ html, body{
     box-shadow: 0px 0px 15px rgb(30, 30, 30);
     z-index: 2;
     visibility: hidden;
+    padding: 25px;
     text-align: center;
 }
 
@@ -53,10 +65,10 @@ html, body{
 }
 
 #infoBox {
-    width: 500px;
-    height: 200px;
-    margin-left: -250px;
-    margin-top: -100px;
+    width: 450px;
+    height: 500px;
+    margin-left: -225px;
+    margin-top: -250px;
 }
 
 
@@ -85,7 +97,7 @@ html, body{
 }
 
 #playBtn {
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 #addBtn {
@@ -105,12 +117,13 @@ html, body{
 
 /* Textboxes */
 #postArea {
-    display: inline-block;
-    margin-top: 15px;
+    margin: auto;
+    display: block;
     padding: 5px;
+    margin-bottom: 15px;
     font-size: 20px;
     border-radius: 8px;
-    width: 450px;
-    height: 100px;
+    width: 475px;
+    height: 125px;
     resize: none;
 }
