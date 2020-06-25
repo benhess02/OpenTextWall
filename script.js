@@ -65,9 +65,9 @@ addBtn.onclick = function(){
     var y = cameraY;
 
     var req = new XMLHttpRequest();
-    req.open("GET", 
-        encodeURI("server.php?text=" + text + "&x=" + x + "&y=" + y));
-    req.send();
+    req.open("POST", "server.php"); 
+    req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    req.send(encodeURI("text=" + text + "&x=" + x + "&y=" + y));
 
     req.onreadystatechange = function(ev){
         if(req.readyState != 4) return;

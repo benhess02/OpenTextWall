@@ -15,8 +15,8 @@ function sendOK(){
 }
 
 function requireParam($name){
-    if(isset($_REQUEST[$name])){
-        return $_REQUEST[$name];
+    if(isset($_POST[$name])){
+        return $_POST[$name];
     }
     sendError("Missing request parameter '" . $name . "'.");
 }
@@ -31,7 +31,7 @@ if($json == ""){
     $json = "[]";
 }
 
-if(isset($_REQUEST["text"])) {
+if(isset($_POST["text"])) {
     $text = requireParam("text");
     $x = intval(requireParam("x"));
     $y = intval(requireParam("y"));
