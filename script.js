@@ -93,7 +93,7 @@ function getData(){
     req.onreadystatechange = function(ev){
         if(req.readyState != 4) return;
         data = JSON.parse(req.responseText);
-        window.setTimeout(getData, 5000);
+        window.setTimeout(getData, 4000);
     }
 }
 
