@@ -1,0 +1,116 @@
+/* General reset and sizing */
+html, body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#cvs {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Text */
+.titleText {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.subtitleText {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+
+/* Boxes */
+.box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: lightgray;
+    border-color: grey;
+    border-radius: 20px;
+    border-width: 3px;
+    border-style: solid;
+    box-shadow: 0px 0px 15px rgb(30, 30, 30);
+    z-index: 2;
+    visibility: hidden;
+    text-align: center;
+}
+
+#addBox {
+    width: 500px;
+    height: 200px;
+    margin-left: -250px;
+    margin-top: -100px;
+}
+
+#infoBox {
+    width: 500px;
+    height: 200px;
+    margin-left: -250px;
+    margin-top: -100px;
+}
+
+
+/* Buttons */
+.blue-button {
+    display: inline-block; 
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    border-color: white;
+    border-style: outset;
+    font-size: 25px;
+    z-index: 1;
+}
+
+.blue-button:disabled {
+    background-color: darkgray;
+    color: gray;
+    border-color: gray;
+}
+
+#playBtn {
+    margin-top: 40px;
+}
+
+#addBtn {
+    margin-top: 10px;
+}
+
+#addCancelBtn {
+    margin-top: 10px;
+}
+
+#newPostBtn {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+
+/* Textboxes */
+#postArea {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 8px;
+    width: 450px;
+    height: 100px;
+    resize: none;
+}
