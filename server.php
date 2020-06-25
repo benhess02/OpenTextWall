@@ -21,7 +21,15 @@ function requireParam($name){
     sendError("Missing request parameter '" . $name . "'.");
 }
 
+if(!file_exists("data.json")){
+    file_put_contents("data.json", "[]");
+}
+
 $json = file_get_contents("data.json");
+
+if($json == ""){
+    $json = "[]";
+}
 
 if(isset($_REQUEST["text"])) {
     $text = requireParam("text");
