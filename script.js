@@ -174,22 +174,27 @@ window.onmousemove = function(ev){
         this.mouseX = ev.clientX;
         this.mouseY = ev.clientY;
     }
-}
+};
 
 window.onmousedown = function(ev){
     if(this.gameEnabled){
+        if(ev.button != 0) return;
         this.mouseDown = true;
         this.dragMouseX = this.mouseX;
         this.dragMouseY = this.mouseY;
         this.dragCameraX = this.cameraX;
         this.dragCameraY = this.cameraY;
     }
-}
+};
 
-window.onmouseup = function(){
+window.onmouseup = function(ev){
+    if(ev.button != 0) return;
     this.mouseDown = false;
-}
+};
 
+window.oncontextmenu = function() {
+    return false;
+};
 
 // *** Game ***
 function setGameEnabled(enabled){
