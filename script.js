@@ -145,6 +145,7 @@ function drawText(){
     ctx.fillStyle = "black";
     ctx.font = textSize + "px sans-serif";
     ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
 
     for(var i = 0; i < data.length; i++){
         var _x = data[i].x + xOffset;
@@ -173,6 +174,7 @@ function drawStatusText(){
     ctx.fillStyle = "black";
     ctx.font = "15px sans-serif";
     ctx.textAlign = "left";
+    ctx.textBaseline = "bottom";
     ctx.fillText("X: " + cameraX + "  Y: " + cameraY, 15, 25);
 }
 
