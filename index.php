@@ -48,6 +48,19 @@
 
     </div>
     <button id="newPostBtn" class="blue-button">Add New Post</button>
+
+    <?php
+    $clientX = 0;
+    $clientY = 0;
+    if(isset($_GET["x"])){
+        $clientX = $_GET["x"];
+    }
+    if(isset($_GET["y"])){
+        $clientY = $_GET["y"];
+    }
+    echo "<script>var cameraX=" . $clientX . ";var cameraY=" . $clientY . ";</script>";
+    ?>
+    
     <script src="script.js"></script>
 </body>
 </html>

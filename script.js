@@ -7,10 +7,6 @@ var gameEnabled = true;
 var cvs = document.getElementById("cvs");
 var ctx = cvs.getContext("2d");
 
-var cameraX = 0;
-var cameraY = 0;
-
-
 // *** UI variables ***
 var infoBox = document.getElementById("infoBox");
 var playBtn = document.getElementById("playBtn");
@@ -205,6 +201,7 @@ window.onmousedown = function(ev){
 window.onmouseup = function(ev){
     if(ev.button != 0) return;
     this.mouseDown = false;
+    setURL();
 };
 
 window.oncontextmenu = function() {
@@ -216,6 +213,13 @@ function setGameEnabled(enabled){
     gameEnabled = enabled;
     newPostBtn.disabled = !enabled;
     if(!enabled) mouseDown = false;
+}
+
+function setURL(){
+    if(window.history.replaceState){
+        var path = location.href.split("?")[0];
+        window.history.replaceState({}, document.title, path + "?x=" + cameraX + "&y=" + cameraY);
+    }
 }
 
 window.setInterval(function(){
